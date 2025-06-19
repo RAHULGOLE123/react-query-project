@@ -28,6 +28,18 @@ export const fetchInvPost = async (id) => {
 // ..pagination
 //! https://jsonplaceholder.typicode.com/posts?_start=1&_limit=3
 
+// to delete the post
+// mutation function to delete the post
 export const deletePost = (id) => {
   return api.delete(`/posts/${id}`);
+};
+
+
+// to create a new post
+export const updatePost = (id) => {
+  return api.patch(`/posts/${id}`, {
+    title: "Updated Title",
+    body: "Updated Body",
+  });
+
 };
