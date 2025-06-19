@@ -2,7 +2,6 @@
 import {
   keepPreviousData,
   useMutation,
-  // useMutation,
   useQuery,
   useQueryClient,
 } from "@tanstack/react-query";
@@ -24,7 +23,7 @@ export const FetchRQ = () => {
   });
 
   // mutation function  to delete a post
-  useMutation({
+  const deleteMutaion useMutation ({
     mutationFn: (id) => deletePost(id),
   });
 
@@ -46,9 +45,10 @@ export const FetchRQ = () => {
                 <p>{title}</p>
                 <p>{body}</p>
               </NavLink>
+              <button onClick={ () => deleteMutaion.mutate(id)}>delete</button>
              
             </li>
-          );
+          );  
         })}
       </ul>
 
