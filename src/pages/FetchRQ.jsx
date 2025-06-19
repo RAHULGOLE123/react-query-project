@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import {
   keepPreviousData,
+  useMutation,
   // useMutation,
   useQuery,
   useQueryClient,
@@ -20,6 +21,11 @@ export const FetchRQ = () => {
     placeholderData: keepPreviousData,
     // refetchInterval: 1000, // refetch data every second
     // refetchIntervalInBackground: true, // refetch data in the background
+  });
+
+  // mutation function  to delete a post
+  useMutation({
+    mutationFn: (id) => deletePost(id),
   });
 
   
