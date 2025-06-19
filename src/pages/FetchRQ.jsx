@@ -23,12 +23,14 @@ export const FetchRQ = () => {
     // refetchIntervalInBackground: true, // refetch data in the background
   });
 
-  // mutation function  to delete a post
+  // mutation function to delete the post
   const deleteMutation = useMutation({
     mutationFn: (id) => deletePost(id),
-    onSuccess: (data, id) =>{
-      QueryClient.setQueryData([])
-    }
+    onSuccess: (data, id) => {
+      queryClient.setQueryData(["posts", pageNumber], (curElem) => {
+        return curElem?.filter((post) => post.id !== id);
+      });
+    },
   });
 
   
