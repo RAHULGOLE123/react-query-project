@@ -23,7 +23,7 @@ export const FetchRQ = () => {
   });
 
   // mutation function  to delete a post
-  const deleteMutaion useMutation ({
+  const deleteMutation = useMutation({
     mutationFn: (id) => deletePost(id),
   });
 
@@ -45,7 +45,7 @@ export const FetchRQ = () => {
                 <p>{title}</p>
                 <p>{body}</p>
               </NavLink>
-              <button onClick={ () => deleteMutaion.mutate(id)}>delete</button>
+              <button onClick={ () => deleteMutation.mutate(id)}>delete</button>
              
             </li>
           );  
