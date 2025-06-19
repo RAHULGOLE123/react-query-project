@@ -58,51 +58,7 @@ This project is a complete implementation of **React Query (TanStack Query)** us
   Load more items on scroll with `useInfiniteQuery`.
 
 - **Intersection Observer with infinite scroll**  
-  ```
-  ┌────────────────────┐
-  │ useInfiniteQuery() │
-  └─────────┬──────────┘
-            │
-            ▼
- 🔁 Calls queryFn({ pageParam })  
-            │
-            ▼
-    Server se data fetch hota hai
-            │
-            ▼
- 🔢 Response mein getNextPageParam milta hai
-            │
-            ▼
-    Calculate the Page no
-    
-            │
-            ▼
-useInfiniteQuery store karta hai:
-  ┌──────────────────────────────┐
-  │ [page1Data, page2Data, ...]  │ ← allPages
-  └──────────────────────────────┘
-            │
-            ▼
-   UI renders all combined data
-            │
-(User scrolls or presses 'Load More')
-            │
-            ▼
- ⏩ fetchNextPage() trigger hota hai
-            │
-            ▼
- queryFn runs again with next pageParam
-            │
-            ▼
-   Server se agla page aata hai
-            │
-            ▼
- Data is appended to previous pages
-            │
-            ▼
-   UI updates with more items
-```
-
+  Detect when user reaches end of list and load next page.
 
 - **Hosting on Hostinger**  
   Build (`npm run build`) and deploy the `dist/` folder to Hostinger.
