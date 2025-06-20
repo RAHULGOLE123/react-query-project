@@ -102,6 +102,7 @@ This project is a complete implementation of **React Query (TanStack Query)** us
 
 * **Infinite scrolling**
   Implement infinite scrolling using `useInfiniteQuery` and `fetchNextPage`. This keeps loading more data as user scrolls down.
+  
 
 * **Intersection Observer with infinite scroll**
   Detect when user reaches bottom of the list using `IntersectionObserver` API, and trigger `fetchNextPage` to load next set of data automatically.
