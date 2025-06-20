@@ -113,7 +113,7 @@ This project is a complete implementation of **React Query (TanStack Query)** us
 ---
 
 ## 🖥️ Live Demo
-🌐 [View Live Site](https://reactqueryproject.netlify.app/)
+🌐 [View Live Site]()
 
 ---
 
